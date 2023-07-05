@@ -16,10 +16,10 @@ The Taylor Swift Algorithm is a simplified simulation of a ticket purchasing pro
 - There are some interesting merits in such a protocol - one of which is that it somewhat eliminates "Fastest Fingers First", especially when the difference in entry time between users can go as small as nanoseconds, and those who enter at batches similar times (within an acceptable range) have a fair shot at getting the ticket WITHIN their timing batch
 
 
-- Realistically for the Eras Tour, for the set of people in the Waiting Room `W` BEFORE sale time `t`, and the set of tickets `T`, it was clear to me that `|W| > |T|` so in that case the algorithm is straightforward - shuffle the order of everyone from the Waiting Room as they are transitioned into the holding queue.
+- Realistically for the Eras Tour, for the set of people in the Waiting Room `W` BEFORE sale time `t_sale`, and the set of tickets `T`, it was clear to me that `|W| > |T|` so in that case the algorithm is straightforward - shuffle the order of everyone from the Waiting Room as they are transitioned into the holding queue.
 
 
-- However, what was interesting to me was this scenario: If instead `|W| < |T|` (i.e. less people in the Waiting Room than tickets available, remember the Waiting Room is only for people who arrive at `t_curr < t`) BUT there are more users coming in to buy and they arrive at `t_curr > t_sale`, how would a Ticket Allocation algorithm handle their queue positions? If we're randomising queue numbers within people of the same arrival time batch, surely we must be careful not to displace those who arrived at an earlier time batch?
+- However, what was interesting to me was this scenario: If instead `|W| < |T|` (i.e. less people in the Waiting Room than tickets available, remember the Waiting Room is only for people who arrive at `t_curr < t_sale`) BUT there are more users coming in to buy and they arrive at `t_curr > t_sale`, how would a Ticket Allocation algorithm handle their queue positions? If we're randomising queue numbers within people of the same arrival time batch, surely we must be careful not to displace those who arrived at an earlier time batch?
 
 ## Assumptions
 

@@ -51,6 +51,8 @@ To simplify the model, we make these following assumptions:
 
 1. **Fairness**: For any two users `{u, v} ∈ U`, where `t(u) = t(v)`, the absolute difference between `q(u)` and `q(v)` should be within an acceptable range `r`. Formally, `t(u) = t(v) → |q(u) - q(v)| <= r`. This means if two users arrive at the same time, their positions in the queue shouldn't be too far apart, where the definition of "too far" is determined by the acceptable range `r`.
 
+Proofs are outlined in this [article](https://medium.com/@nicholasgcc/the-taylor-swift-algorithm-a-fairness-based-ticketing-allocation-protocol-6510f66db19e)
+
 ## Project Structure
 
 The project is structured into several Java classes, each encapsulating a part of the system:
